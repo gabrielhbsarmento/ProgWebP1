@@ -1,0 +1,19 @@
+var sorteio = document.querySelector('p#numSorteio')
+ 
+var sortNum = sorteio.innerHTML
+var numAleatorio
+ document.getElementById("bt-gerar").onclick = gerarAleatorio = () =>{
+    numAleatorio = Math.floor(Math.random() * 50)
+    sorteio.innerHTML = numAleatorio
+    var divs = document.querySelectorAll('span'), i;
+ 
+    for (i = 0; i < divs.length; ++i) {
+      if(divs[i].innerText == numAleatorio){
+          console.log(divs)
+        divs[i].classList.remove("span-bingo")
+        divs[i].classList.add("numeroSorteado")
+      }
+             
+    }
+     
+}
